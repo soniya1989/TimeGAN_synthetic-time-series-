@@ -1,0 +1,9 @@
+Bootstrap: docker
+From: tensorflow/tensorflow:2.16.1-gpu
+
+%post
+    pip install scikit-learn pandas matplotlib seaborn
+    pip cache purge
+
+%labels
+    Description TimeGAN environment for Vera
